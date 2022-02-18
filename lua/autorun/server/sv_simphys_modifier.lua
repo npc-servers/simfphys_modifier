@@ -1,4 +1,5 @@
 local rawget = rawget
+-- Damage multipliers for example 2 means double damage and 0.5 means simphys only take half damage.
 local weaponModifiers = {
     --["weapon_357"] = 100, --Makes the magnum do 100x more damage
 }
