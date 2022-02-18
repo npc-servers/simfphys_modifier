@@ -38,10 +38,12 @@ local function modifyVehicle( vehicleClass, tbl )
     print( printPrefix( "Modified " .. vehicleClass .. " succesfully" ) )
 end
 
--- Example useage
--- local sim_fphys_tank2 = {
+-- Example useage:
+-- Sets the health of the sherman tank to 10.
+
+-- local symphysTable = {
 --     Members = {
 --         MaxHealth = 10
 --     }
 -- }
--- modifyVehicle( "sim_fphys_tank2", sim_fphys_tank2 )
+-- modifyVehicle( "sim_fphys_tank2", symphysTable )
