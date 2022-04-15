@@ -8,7 +8,15 @@ hook.Add( "EntityTakeDamage", "SimphysModifiers_DamageModifiers", function( targ
     if not IsValid( target ) then return end
     if target:GetClass() ~= "gmod_sent_vehicle_fphysics_base" then return end
 
-    local weapon = dmginfo:GetAttacker():GetActiveWeapon()
+    local weapon
+    local attacker = dmginfo:GetAttacker()
+
+    if attacker:IsPlayer() then
+        weapon = attacker:GetActiveWeapon() or attacker
+    else    
+        weapon = attacker
+    end
+
     if not IsValid( weapon ) then return end
     local weaponClass = weapon:GetClass()
 
